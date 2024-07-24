@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "cffb908a-38b2-488d-9f6a-5b720a3c57df",
+		"name": "Phonebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9073679",
+		"_collection_link": "https://universal-trinity-940425.postman.co/workspace/9aa511c8-5df8-4597-a1ea-66fadeeaef2a/collection/9073679-cffb908a-38b2-488d-9f6a-5b720a3c57df?action=share&source=collection_link&creator=9073679"
+	},
+	"item": [
+		{
+			"name": "Find By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7908/api/phonebook/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7908",
+					"path": [
+						"api",
+						"phonebook",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"surname\": \"Reyhans\",\r\n    \"middlename\": null,\r\n    \"phone\": \"087775765717\",\r\n    \"workPhone\": \"4801257\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7908/api/phonebook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7908",
+					"path": [
+						"api",
+						"phonebook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"surname\": \"Almas\",\r\n    \"middlename\": \"Nova Shafira\",\r\n    \"phone\": \"089622904592\",\r\n    \"workPhone\": \"460987\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7908/api/phonebook/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7908",
+					"path": [
+						"api",
+						"phonebook",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7908/api/phonebook/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7908",
+					"path": [
+						"api",
+						"phonebook",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"surname\": \"Almas\",\r\n    \"middlename\": \"Nova\",\r\n    \"phone\": \"89622904592\",\r\n    \"workPhone\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7908/api/phonebook/list?search=Almas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7908",
+					"path": [
+						"api",
+						"phonebook",
+						"list"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Almas"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
